@@ -18,5 +18,4 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC); // var arī ievietot 2
 echo"<ul>";
 foreach ($posts as $g) {
     echo "<li> $g[content] </li>";
-}
-echo"</ul>";
+} echo"</ul>";
