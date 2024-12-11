@@ -11,7 +11,7 @@ $statement = $pdo->prepare("SELECT * FROM posts");
 // Izpildīt statement
 $statement->execute();
 // Dabūt rezultātu
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC); // var arī ievietot 2
+$posts = $statement->fetchAll(PDO::FETCH_ASSOC); // var arī ievietot 2 iekavās
 
 // dd($posts); // Izpilda funkciju dd
 
