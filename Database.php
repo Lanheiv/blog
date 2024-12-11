@@ -1,7 +1,7 @@
 <?php
 
 class Database {
-    public function query() {
+    public function query($sql) {
             // Dats Source Name = DSN
         $dsn = "mysql:host=localhost;port=3306;user=root;password=;dbname=blog_ipb23;charset=utf8mb4";
         
@@ -9,7 +9,7 @@ class Database {
         $pdo = new PDO($dsn);
 
             // Sagatavo vaicājumu (statement) 
-        $statement = $pdo->prepare("SELECT * FROM posts"); // prepare ir metode (līdzīk funkcijai)
+        $statement = $pdo->prepare($sql); // prepare ir metode (līdzīk funkcijai)
             // Izpildīt statement
         $statement->execute();
 

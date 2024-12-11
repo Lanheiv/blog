@@ -3,7 +3,7 @@ require "fancions.php";
 require "Database.php";
 
 $db = new DATABASE();
-$posts = $db->query();
+$posts = $db->query("SELECT * FROM posts");
 
 // dd($posts); // Izpilda funkciju dd
 
