@@ -1,21 +1,22 @@
 <?php
-
 class Database {
-    public function query($sql) {
-            // Dats Source Name = DSN
-        $dsn = "mysql:host=localhost;port=3306;user=root;password=;dbname=blog_ipb23;charset=utf8mb4";
+    public $pdo;
+
+    // Konstruktors - izpilds vienu reizi, kad objekts ir uzstaisīts.
+    public function __construct($config) {
+        // Dats Source Name = DSN
+        $dsn = "mysql:" . http_build_query($config, "", ";");
         
-            // PDO - PHP Data Object
-        $pdo = new PDO($dsn);
-
-            // Sagatavo vaicājumu (statement) 
-        $statement = $pdo->prepare($sql); // prepare ir metode (līdzīk funkcijai)
-            // Izpildīt statement
+        // PDO - PHP Data Object
+        $this->pdo = new PDO($dsn);
+        $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    }
+    public function query($sql) {
+        // Sagatavo vaicājumu (statement) 
+        $statement = $this->pdo->prepare($sql); // prepare ir metode (līdzīk funkcijai)
+        // Izpildīt statements
         $statement->execute();
-
-        // Dabūt rezultātu
-        $data = $statement->fetchAll(PDO::FETCH_ASSOC); // var arī ievietot 2 iekavās
-        return $data;
+        // Atgriež datus
+        return $statement;
     }
 }
-?>
