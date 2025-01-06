@@ -5,10 +5,14 @@ require "Database.php";
 $config = require("config.php");
 
 $db = new DATABASE($config["database"]);
-$posts = $db->query("SELECT * FROM post")->fetchAll(PDO::FETCH_ASSOC); // var arī ievietot 2 iekavās;
+$posts = $db->query("SELECT * FROM post")->fetchAll(); // var arī ievietot 2 iekavās;
 // dd($posts); // Izpilda funkciju dd
-?>
 
+if (isset($_GET["q"]) && $_GET["q"] != "") {
+    // var_dump($_GET["q"]); // izvada meklēto
+    $posts = $db->query("SELECT * FROM post WHERE content LIKE '%" . $_GET["q"] . "%'; ")->fetchAll();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
