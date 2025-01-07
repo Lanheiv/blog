@@ -17,3 +17,14 @@ VALUES
 
 	-- Apskata datus --
 SELECT * FROM posts;
+
+	-- Izveido table --
+CREATE TABLE categories (
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	category_name VARCHAR(25) NOT NULL 
+)
+
+	-- Ievieto datus --
+INSERT INTO categories (category_name)
+VALUES
+("Svētki"), ("Mūzika"), ("Sports");
