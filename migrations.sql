@@ -18,6 +18,7 @@ VALUES
 	-- Apskata datus --
 SELECT * FROM posts;
 
+
 	-- Izveido table --
 CREATE TABLE categories (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
