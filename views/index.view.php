@@ -8,7 +8,7 @@
 <body>
     <h1>Saraksts</h1>
     <form>
-        <input name="q" type="text">
+        <input name="q" type="text" value="<?= $_GET["q"] ?? '' ?>">
         <button>Meklēt</button>
     </form>
     
@@ -18,7 +18,7 @@
 
     <ul>
     <?php foreach ($posts as $g) { ?>
-        <li> <?php echo $g["content"]; ?> </li>
+        <li> <?= $g["content"]; ?> </li>
     <?php } ?>
     </ul>
     <img src="assets/shampoo.PNG">

@@ -18,3 +18,9 @@ if (isset($_GET["q"]) && $_GET["q"] != "") {
 $posts = $db->query($select , $params)->fetchAll(); // var arī ievietot 2 iekavās;
 
 require "views/index.view.php";
+
+
+/* if dažādi veidi
+$y = isset($x) ? $x: "Nav vērtības"; //Ternery Operator - Trīskāršais operātors.
+$y = $x ?? "Nav vērtības"; // Null collection operator
+*/
