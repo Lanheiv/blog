@@ -18,7 +18,6 @@ if (isset($_GET["q"]) && $_GET["q"] != "") {
 $posts = $db->query($select , $params)->fetchAll(); // var arī ievietot 2 iekavās;
 
 $pagatitle = "Saraksts";
-$style = "style/basic.style.css";
 
 require "views/index.view.php";
 

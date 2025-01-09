@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sākums</title>
-</head>
-<body>
-    <?php require("components/navbar.php"); ?>
+    <?php require("components/header.php"); 
+          require("components/navbar.php");
+    ?>
     <h1>Sākums</h1>
-</body>
-</html>
+    <?php require("components/footer.php"); ?>
