@@ -1,4 +1,6 @@
-    <?php require("components/header.php"); ?>
+    <?php require("components/header.php"); 
+          require("components/navbar.php");
+    ?>
 
     <h1>Saraksts</h1>
     <form>

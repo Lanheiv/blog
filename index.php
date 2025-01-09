@@ -1,29 +1,12 @@
-<?php
-require "function/fancions.php";
-require "function/Database.php";
-
-$config = require("config.php");
-
-$db = new DATABASE($config["database"]);
-// dd($posts); // Izpilda funkciju dd
-
-$select = "SELECT * FROM post";
-$params = [];
-if (isset($_GET["q"]) && $_GET["q"] != "") {
-    // var_dump($_GET["q"]); // izvada meklēto
-    $serch = '%' . $_GET["q"] . '%';
-    $select .= " WHERE content LIKE :nosaukums";
-    $params = ["nosaukums" => $serch];
-}
-$posts = $db->query($select , $params)->fetchAll(); // var arī ievietot 2 iekavās;
-
-$pagatitle = "Saraksts";
-$style = "style/index.style.css";
-
-require "views/index.view.php";
-
-
-/* if dažādi veidi
-$y = isset($x) ? $x: "Nav vērtības"; //Ternery Operator - Trīskāršais operātors.
-$y = $x ?? "Nav vērtības"; // Null collection operator
-*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sākums</title>
+</head>
+<body>
+    <?php require("components/navbar.php"); ?>
+    <h1>Sākums</h1>
+</body>
+</html>
