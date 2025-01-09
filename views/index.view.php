@@ -21,6 +21,5 @@
         <li> <?= $g["content"]; ?> </li>
     <?php } ?>
     </ul>
-    <img src="assets/shampoo.PNG">
 </body>
 </html>
