@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saraksts</title>
-</head>
-<body>
+    <?php require("components/header.php"); ?>
+
     <h1>Saraksts</h1>
     <form>
         <input name="q" type="text" value="<?= $_GET["q"] ?? '' ?>">
@@ -21,5 +15,4 @@
         <li> <?= $g["content"]; ?> </li>
     <?php } ?>
     </ul>
-</body>
-</html>
+    <?php require("components/footer.php"); ?>

@@ -1,6 +1,6 @@
 <?php
-require "fancions.php";
-require "Database.php";
+require "function/fancions.php";
+require "function/Database.php";
 
 $config = require("config.php");
 
@@ -16,6 +16,9 @@ if (isset($_GET["q"]) && $_GET["q"] != "") {
     $params = ["nosaukums" => $serch];
 }
 $posts = $db->query($select , $params)->fetchAll(); // var arī ievietot 2 iekavās;
+
+$pagatitle = "Saraksts";
+$style = "style/index.style.css";
 
 require "views/index.view.php";
 
