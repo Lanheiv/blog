@@ -2,7 +2,6 @@
 return  [
             "database"=> [
                 "host"=>"localhost",
-                "port"=>"3306",
                 "user"=>"root",
                 "password"=>"230207",
                 "dbname"=>"blog_ipb23",
