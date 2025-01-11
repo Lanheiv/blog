@@ -4,11 +4,10 @@ return  [
                 "host"=>"localhost",
                 "port"=>"3306",
                 "user"=>"root",
-                "password"=>"",
+                "password"=>"230207",
                 "dbname"=>"blog_ipb23",
                 "charset"=>"utf8mb4"
             ]
         ];
 // .gitignore faila tips lai git ignorētu failu, šinī failā var glabār svarīgu informāciju.
 ?>
-
