@@ -4,4 +4,4 @@
     <h1>Sākums</h1>
     <?php require("components/footer.php"); ?>
 
-<!-- test --> 
+<!-- test -->  
