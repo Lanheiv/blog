@@ -1,8 +1,8 @@
 <nav>
     <ul>
-        <li><a href="index.php">Sākums</a></li>
-        <li><a href="story.php">Par mums</a></li>
-        <li><a href="galery.php">Kolāža</a></li>
-        <li><a href="list.php">Saraksts</a></li>
+        <li><a href="/">Sākums</a></li>
+        <li><a href="/story">Par mums</a></li>
+        <li><a href="/galery">Kolāža</a></li>
+        <li><a href="/list">Saraksts</a></li>
     </ul>
 </nav>

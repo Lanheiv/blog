@@ -1,7 +1,9 @@
-    <?php require("components/header.php"); 
-          require("components/navbar.php");
-    ?>
-    <h1>Sākums</h1>
-    <?php require("components/footer.php"); ?>
+<?php
+require "function/fancions.php";
+require "function/Database.php";
 
-<!-- test -->  
+$config = require("config.php");
+
+$db = new DATABASE($config["database"]);
+
+require "router.php";
