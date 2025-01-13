@@ -10,3 +10,4 @@ return  [
         ];
 // .gitignore faila tips lai git ignorētu failu, šinī failā var glabār svarīgu informāciju.
 ?>
+ 
