@@ -1,11 +1,4 @@
-header {
+body {
     background-color: black;
     color: white;
-}
-header ul {
-    display: grid;
-    margin: 0;
-}
-header li {
-    padding: 15px;
 }

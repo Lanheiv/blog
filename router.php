@@ -6,4 +6,4 @@ if ($uri == "/") {
     require "controllers/index.php";
 } elseif ($uri == "/list"){
     require "controllers/list.php";
-}
+} // RewriteCon in .

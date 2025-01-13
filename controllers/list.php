@@ -1,8 +1,4 @@
 <?php
-$config = require("config.php");
-
-$db = new DATABASE($config["database"]);
-// dd($posts); // Izpilda funkciju dd
 
 $select = "SELECT * FROM post";
 $params = [];
