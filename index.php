@@ -2,7 +2,7 @@
 require "function/fancions.php";
 require "function/Database.php";
 
-$config = require("config.php");
+$config = require("config.php"); // iekavas var būt problēm 
 $db = new DATABASE($config["database"]);
 
 require "router.php"; 
