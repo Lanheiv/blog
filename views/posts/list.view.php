@@ -14,7 +14,7 @@
 
     <ul>
     <?php foreach ($posts as $g) { ?>
-        <li> <?= $g["content"]; ?> </li>
+        <li><a href="show?id=<?= $g["id"] ?>"> <?= $g["content"]; ?> </a></li>
     <?php } ?>
     </ul>
     <?php require("views/components/footer.php"); ?>

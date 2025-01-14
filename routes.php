@@ -2,5 +2,6 @@
 
 return [
     "/" => "controllers/index.php",
-    "/list" => "controllers/list.php"
+    "/show" => "controllers/posts/show.php",
+    "/list" => "controllers/posts/list.php"
 ];
