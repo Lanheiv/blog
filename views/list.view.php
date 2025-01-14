@@ -1,5 +1,5 @@
-    <?php require("components/header.php"); 
-          require("components/navbar.php");
+    <?php require("views/components/header.php"); 
+          require("views/components/navbar.php");
     ?>
 
     <h1>Saraksts</h1>
@@ -9,7 +9,7 @@
     </form>
     
     <?php if(count($posts) == 0) { ?>
-        <p>Dundāli te nekā tāda nav!</p>
+        <p>Tukš</p>
     <?php } ?>
 
     <ul>
@@ -17,4 +17,4 @@
         <li> <?= $g["content"]; ?> </li>
     <?php } ?>
     </ul>
-    <?php require("components/footer.php"); ?>
+    <?php require("views/components/footer.php"); ?>

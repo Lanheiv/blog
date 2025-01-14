@@ -12,7 +12,7 @@ $posts = $db->query($select , $params)->fetchAll(); // var arī ievietot 2 iekav
 
 $pagatitle = "Saraksts";
 
-require "views/index.view.php";
+require "views/list.view.php";
 
 
 /* if dažādi veidi

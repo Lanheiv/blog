@@ -6,5 +6,5 @@
     <title><?= $pagatitle ?? "Blog" ?></title>
     <link rel="stylesheet" href="style/basic.style.css">
     <link rel="stylesheet" href="style/navbar.style.css">
-</head>
+</head> 
 <body>

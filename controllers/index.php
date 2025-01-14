@@ -1,10 +1,10 @@
     <?php 
     
-    require("components/header.php"); 
-    require("components/navbar.php");
+    require("views/components/header.php"); 
+    require("views/components/navbar.php");
 
     ?>
     <h1>Sākums</h1>
-    <?php require("components/footer.php"); ?>
+    <?php require("views/components/footer.php"); ?>
 
 <!-- test -->  
