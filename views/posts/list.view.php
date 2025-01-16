@@ -1,5 +1,5 @@
     <?php require("views/components/header.php"); 
-          require("views/components/navbar.php");
+    require("views/components/navbar.php");
     ?>
 
     <h1>Saraksts</h1>
@@ -14,7 +14,7 @@
 
     <ul>
     <?php foreach ($posts as $g) { ?>
-        <li><a href="show?id=<?= $g["id"] ?>"> <?= $g["content"]; ?> </a></li>
+        <li><a href="show?id=<?= $g["id"] ?>"> <?= htmlspecialchars($g["content"]); ?> </a></li>
     <?php } ?>
     </ul>
     <?php require("views/components/footer.php"); ?>
