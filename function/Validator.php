@@ -1,7 +1,7 @@
 <?php 
 
 class Validator {
-    public function string($value, $min = 1, $max = INF) {
+    public static function string($value, $min = 1, $max = INF) {
         $value = trim($value);
 
         return is_string($value)
@@ -14,7 +14,7 @@ class Validator {
             return false;
         } */
     }
-    public function number($value, $min = 1, $max = INF) {
+    public static function number($value, $min = 1, $max = INF) {
         $value = trim($value);
 
         return is_string($value)

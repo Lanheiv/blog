@@ -3,7 +3,7 @@ return  [
             "database"=> [
                 "host"=>"localhost",
                 "user"=>"root",
-                "password"=>"230207",
+                "password"=>"",
                 "dbname"=>"blog_ipb23",
                 "charset"=>"utf8mb4"
             ]
