@@ -6,8 +6,8 @@ USE blog_ipb23;
 
 	-- Izveido tabulas --
 CREATE TABLE post (
- id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
- content VARCHAR(255) -- TEXT to izmanto garākai informācijai. --
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+content VARCHAR(255) -- TEXT to izmanto garākai informācijai. --
 );
 CREATE TABLE categories (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

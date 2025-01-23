@@ -4,7 +4,6 @@
 <h1>Rediģēt bloga ierakstu</h1>
 
 <form method="POST">
-    <input type="hidden" name="id" value="<?= $post["id"] ?? '' ?>">
     <input name="content" type="text" value="<?= $post['content'] ?? "" ?>">
     <button>Pievienot</button>
 </form>

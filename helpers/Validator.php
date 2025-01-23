@@ -7,12 +7,6 @@ class Validator {
         return is_string($value)
                 && strlen($value) >= $min
                 && strlen($value) <= $max;
-
-        /* if (is_string($value) && strlen($value) >= $min && strlen($value) <= $max) {
-            return true;
-        } else {
-            return false;
-        } */
     }
     public static function number($value, $min = 1, $max = INF) {
         $value = trim($value);

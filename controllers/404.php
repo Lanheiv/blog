@@ -1,1 +1,5 @@
-<?php require "views/404.view.php"; ?>
+<?php 
+$pagatitle = "404 Error";
+
+require("views/404.view.php"); 
+?>

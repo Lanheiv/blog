@@ -1,23 +1,25 @@
 <?php
 
+if (!Validator::number($_GET["id"])) {
+    redirectIfNotFound();
+}
+
 $sql = "SELECT * FROM post WHERE id = :id";
 $params = ["id" => $_GET["id"]];
 $post = $db->query($sql, $params)->fetch();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($post["content"]) && is_numeric($_POST["id"])) {
-        if (isset($_POST["value"]) == "ja") {
-            $params = ["id" => $_POST["id"]];
-            $sql = "DELETE FROM post WHERE id = :id";
-
-            $db->query($sql , $params);
-            header("Location: /"); exit();
-        } else {
-            header("Location: /show?id=" . $_POST["id"]); exit();
-        }
-    } else {
+if (!$post) {
+    redirectIfNotFound();
+}
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["value"])) {
+        $sql = "DELETE FROM post WHERE id = :id";
+        
+        $db->query($sql , $params);
         header("Location: /"); exit();
     }
+    header("Location: /show?id=" . $_GET["id"]); exit();
 }
 
-require "views/posts/delete.view.php";
+$pagatitle = "Dzēšana";
+require("views/posts/delete.view.php");

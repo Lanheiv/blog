@@ -1,15 +1,13 @@
 <?php   
-
-if (!isset($_GET["id"]) || $_GET["id"] == "") {
-    redirectIfNotFound();
-}
-
 $sql = "SELECT * FROM post WHERE id = :id";
-$params = ["id" => $_GET["id"]]; 
+$params = ["id" => $_GET["id"]];
+
 $post = $db->query($sql, $params)->fetch();
 
-if (!$post) {
+if (!$post || !isset($_GET["id"]) || !is_numeric($_GET["id"])) {
     redirectIfNotFound();
 }
 
-require "views/posts/show.view.php";
+$pagatitle = "Detalizēti";
+require("views/posts/show.view.php");
+?>
