@@ -1,7 +1,7 @@
 <?php require("views/components/header.php");?>
 <?php require("views/components/navbar.php");?>
 
-<h1>Saraksts</h1>
+<h1 class="center">Saraksts</h1>
 <form>
     <input name="q" type="text" value="<?= $_GET["q"] ?? '' ?>">
     <button>Meklēt</button>
@@ -11,7 +11,7 @@
     <p>Tukš</p>
 <?php } ?>
 
-<ul>
+<ul class="list">
 <?php foreach ($posts as $g) { ?>
     <li><a href="show?id=<?= $g["id"] ?>"> <?= htmlspecialchars($g["content"]); ?> </a></li>
 <?php } ?>

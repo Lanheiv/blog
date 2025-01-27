@@ -1,7 +1,7 @@
 <?php require("views/components/header.php"); ?>
 <?php require("views/components/navbar.php"); ?>
 
-<h1>Izveidot bloga ierakstu</h1>
+<h1 class="center">Izveidot bloga ierakstu</h1>
 
 <form method="POST">
     <input name="content" type="text" value="<?= $_POST['content'] ?? '' ?>">

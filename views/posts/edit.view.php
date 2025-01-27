@@ -1,7 +1,7 @@
 <?php require("views/components/header.php"); ?>
 <?php require("views/components/navbar.php"); ?>
 
-<h1>Rediģēt bloga ierakstu</h1>
+<h1 class="center">Rediģēt bloga ierakstu</h1>
 
 <form method="POST">
     <input name="content" type="text" value="<?= $post['content'] ?? "" ?>">

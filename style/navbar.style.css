@@ -1,0 +1,36 @@
+/* Galvenasi stils*/
+body {
+    margin: 0;
+    background-color: #29314C;
+    color: #E8E9E9;
+    font-family: 'Jetbrains Mono', 'monospace';
+}
+.center {
+    text-align: center;
+}
+a {
+    color: #E8E9E9;
+    text-decoration: none;
+}
+
+/* Saraksta stils */
+.list { 
+    list-style-type: none;
+}
+
+/* Navbar stils */
+ul.navbar {
+    background-color: #3E4162;
+    display: flex;
+
+    list-style-type: none;
+    margin: 0;
+
+    justify-content: center;
+}
+ul.navbar li a {
+    padding: 20px;
+}
+ul.navbar li:hover {
+    background-color: #343758;
+}
