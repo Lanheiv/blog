@@ -4,7 +4,7 @@
 <h1 class="center">Rediģēt bloga ierakstu</h1>
 
 <form method="POST">
-    <input name="content" type="text" value="<?= $post['content'] ?? "" ?>">
+    <input name="content" type="text" value="<?= $_POST["content"] ?? "" ?>">
     <button>Pievienot</button>
 </form>
 
