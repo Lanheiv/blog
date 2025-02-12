@@ -19,7 +19,7 @@ CREATE TABLE categories (
 	-- Ievieto vērtības --
 INSERT INTO post (content, category_id)
 VALUES
-("Dzimšanas diena", 2),("Buļba", 5);
+("Dzimšanas diena", 1),("Buļba", 5),("Roks", 2);
 
 INSERT INTO categories (category_name)
 VALUES

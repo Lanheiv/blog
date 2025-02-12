@@ -5,6 +5,13 @@
 
 <form method="POST">
     <input name="content" type="text" value="<?= $_POST['content'] ?? '' ?>">
+    
+    <select name="categories">
+        <?php foreach ($categories as $categ) { ?>
+            <option value="<?=$categ['id']?>"><?=$categ["category_name"]?></option>
+        <?php } ?>
+    </select>
+    
     <button>Pievienot</button>
 </form>
 

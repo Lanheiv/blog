@@ -4,6 +4,11 @@ if (!Validator::number($_GET["id"])) {
     redirectIfNotFound();
 } 
 
+$sql = "SELECT * FROM categories";
+$params = [];
+$categories = $db->query($sql , $params)->fetchAll();
+
+
 $sql = "SELECT * FROM post WHERE id = :id";
 $params = ["id" => $_GET["id"]];
 $post = $db->query($sql, $params)->fetch();
