@@ -7,6 +7,7 @@
     <input name="content" type="text" value="<?= $_POST['content'] ?? '' ?>">
     
     <select name="categories">
+        <!-- <option value="0">--Izvēlaties kādu no kategorijām--</option> -->
         <?php foreach ($categories as $categ) { ?>
             <option value="<?=$categ['id']?>"><?=$categ["category_name"]?></option>
         <?php } ?>
