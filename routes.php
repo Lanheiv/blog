@@ -7,5 +7,9 @@ return [
     "/creat" => "controllers/posts/create.php",
     "/edit" => "controllers/posts/edit.php",
     "/delete" => "controllers/posts/delete.php",
-    "/categories_list" => "controllers/posts/categories.php"
+
+    "/categories.list" => "controllers/posts/categories/categories.php",
+    "/categories.show" => "controllers/posts/categories/categories.show.php",
+    "/categories.edit" => "controllers/posts/categories/categories.edit.php",
+    "/categories.delete" => "controllers/posts/categories/categories.delete.php"
 ];
