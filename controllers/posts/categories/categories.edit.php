@@ -2,12 +2,7 @@
 
 if (!Validator::number($_GET["id"])) {
     redirectIfNotFound();
-} 
-
-$sql = "SELECT * FROM categories";
-$params = [];
-$categories = $db->query($sql , $params)->fetchAll();
-
+}
 
 $sql = "SELECT * FROM categories WHERE id = :id";
 $params = ["id" => $_GET["id"]];
@@ -20,13 +15,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = [];
 
     $params = ["id" => $_GET["id"], "category_name" => $_POST["content"]];
-    $sql = "UPDATE post SET content = :content, category_id = :category_id WHERE id = :id";
+    $sql = "UPDATE categories SET category_name = :category_name WHERE id = :id";
 
     if(!Validator::string($_POST["content"], max: 50)) {
         $errors["content"] = "Saturam jābūt ievadītam, bet ne garākam par 50 rakstzīmēm";
     } else {
         $db->query($sql , $params);
-        header("Location: /show?id=" . $_GET["id"]); exit();
+        header("Location: /categories.show?id=" . $_GET["id"]); exit();
     }
 }
 ?>
@@ -34,16 +29,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php require("views/components/header.php"); ?>
 <?php require("views/components/navbar.php"); ?>
 
-<h1 class="center">Rediģēt bloga ierakstu</h1>
+<h1 class="center">Rediģēt kategoriju</h1>
 
 <form method="POST">
-  
-    <select name="categories">
-        <?php foreach ($categories as $categ) { ?>
-            <option value="<?=$categ['id']?>" <?php if($post["category_id"] == $categ['id']){ echo "selected"; } ?> ><?=$categ["category_name"]?></option>
-        <?php } ?>
-    </select>   
-
+    <input name="content" type="text" value="<?= $_POST["content"] ?? $post["category_name"] ?>">
     <button>Pievienot</button>
 </form>
 
