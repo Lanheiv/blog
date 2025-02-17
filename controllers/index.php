@@ -1,5 +1,5 @@
 <?php 
-$pagatitle = "Sākums";
-
-require("views/index.view.php");
+    
+    $pagatitle = "Sākums";
+    require("views/index.view.php");
 ?>
