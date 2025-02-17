@@ -31,5 +31,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $pagatitle = "Rediģēšana";
-require("views/posts/edit.view.php");
+require("views/posts/list/edit.view.php");
 ?>

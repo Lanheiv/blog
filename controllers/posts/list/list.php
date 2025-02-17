@@ -1,5 +1,5 @@
 <?php
-$select = "SELECT * FROM post";
+$select = "SELECT post.*, categories.category_name FROM post LEFT JOIN categories ON post.category_id = categories.id;";
 $params = [];
 
 if (isset($_GET["q"]) && $_GET["q"] != "") {
@@ -13,7 +13,7 @@ $posts = $db->query($select , $params)->fetchAll();
 $pagatitle = "Saraksts";
 
 $pagatitle = "Saraksts";
-require("views/posts/index.view.php");
+require("views/posts/list/list.view.php");
 
 /* if dažādi veidi
 $y = isset($x) ? $x: "Nav vērtības"; //Ternery Operator - Trīskāršais operātors.

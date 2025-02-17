@@ -10,6 +10,6 @@ if (!$categories || !isset($_GET["id"]) || !($_GET["id"])) {
 }
 
 $pagatitle = "Detalizēti";
-require("views/posts/categories/categories-show.view.php");
+require("views/posts/categories/show.view.php");
 ?>
 

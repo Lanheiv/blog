@@ -9,5 +9,5 @@ if (!$post || !isset($_GET["id"]) || !is_numeric($_GET["id"])) {
 }
 
 $pagatitle = "Detalizēti";
-require("views/posts/show.view.php");
+require("views/posts/list/show.view.php");
 ?>

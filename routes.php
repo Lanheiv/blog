@@ -2,11 +2,12 @@
 
 return [
     "/" => "controllers/index.php",
-    "/show" => "controllers/posts/show.php",
-    "/list" => "controllers/posts/index.php",
-    "/creat" => "controllers/posts/create.php",
-    "/edit" => "controllers/posts/edit.php",
-    "/delete" => "controllers/posts/delete.php",
+
+    "/list" => "controllers/posts/list/list.php",
+    "/list/show" => "controllers/posts/list/list-show.php",
+    "/list/creat" => "controllers/posts/list/list-create.php",
+    "/list/edit" => "controllers/posts/list/list-edit.php",
+    "/list/delete" => "controllers/posts/list/list-delete.php",
 
     "/categories" => "controllers/posts/categories/categories.php",
     "/categories/show" => "controllers/posts/categories/categories-show.php",

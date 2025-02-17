@@ -20,8 +20,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["content"] = "Saturam jābūt ievadītam, bet ne garākam par 50 rakstzīmēm";
     } else {
         $db->query($sql , $params);
-        header("Location: /categories.show?id=" . $_GET["id"]); exit();
+        header("Location: /categories?id=" . $_GET["id"]); exit();
     }
 }
-require("views/posts/categories/categories-edit.view.php");
+require("views/posts/categories/edit.view.php");
 ?>

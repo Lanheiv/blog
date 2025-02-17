@@ -21,5 +21,5 @@ if (isset($_POST["content"]) && isset($_POST["categories"])){
 }
 
 $pagatitle = "Izveidošana";
-require("views/posts/create.view.php");
+require("views/posts/list/create.view.php");
 ?>

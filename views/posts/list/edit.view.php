@@ -7,6 +7,7 @@
     <input name="content" type="text" value="<?= $_POST["content"] ?? $post["content"] ?>">
     
     <select name="categories">
+        <option value="0">--Tukšums--</option>
         <?php foreach ($categories as $categ) { ?>
             <option value="<?=$categ['id']?>" <?php if($post["category_id"] == $categ['id']){ echo "selected"; } ?> ><?=$categ["category_name"]?></option>
         <?php } ?>

@@ -16,10 +16,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "DELETE FROM post WHERE id = :id";
         
         $db->query($sql , $params);
-        header("Location: /"); exit();
+        header("Location: /list"); exit();
     }
-    header("Location: /show?id=" . $_GET["id"]); exit();
+    header("Location: /list/show?id=" . $_GET["id"]); exit();
 }
 
 $pagatitle = "Dzēšana";
-require("views/posts/delete.view.php");
+require("views/posts/list/delete.view.php");

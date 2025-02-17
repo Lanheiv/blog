@@ -5,20 +5,22 @@ if (!Validator::number($_GET["id"])) {
 
 $sql = "SELECT * FROM categories WHERE id = :id";
 $params = ["id" => $_GET["id"]];
-$post = $db->query($sql, $params)->fetch();
+$categories = $db->query($sql, $params)->fetch();
 
-if (!$post) {
+if (!$categories) {
     redirectIfNotFound();
 }
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["value"])) {
-        $sql = "DELETE FROM categories WHERE id = :id";
-        
+        $sql = "UPDATE post SET category_id = 0 WHERE id = :id";
         $db->query($sql , $params);
-        header("Location: /"); exit();
+
+        $sql = "DELETE FROM categories WHERE id = :id";
+        $db->query($sql , $params);
+        header("Location: /categories"); exit();
     }
-    header("Location: /categories?id=" . $_GET["id"]); exit();
+    header("Location: /categories/show?id=" . $_GET["id"]); exit();
 }
 
-require("views/posts/categories/categories-delete.view.php");
+require("views/posts/categories/delete.view.php");
 ?>

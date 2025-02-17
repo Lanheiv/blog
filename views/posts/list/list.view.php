@@ -11,10 +11,17 @@
     <p>Tukš</p>
 <?php } ?>
 
-<ul class="list">
-<?php foreach ($posts as $g) { ?>
-    <li><a href="show?id=<?= $g["id"] ?>"> <?= htmlspecialchars($g["content"]); ?> </a></li>
-<?php } ?>
-</ul>
+<table class="list">
+    <tr>
+        <th>Nosaukums</th>
+        <th>Kategorija</th>
+    </tr>
+    <?php foreach ($posts as $g) { ?>
+        <tr>
+            <th><a href="/list/show?id=<?= $g["id"] ?>"> <?= htmlspecialchars($g["content"]);?></a></th>
+            <th><?= $g["category_name"] ?></th>
+        </tr>
+    <?php } ?>
+</table>
 
 <?php require("views/components/footer.php"); ?>

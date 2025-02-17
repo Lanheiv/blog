@@ -1,7 +1,7 @@
 <?php require("views/components/header.php");?>
 <?php require("views/components/navbar.php");?>
 
-<h1 class="center">Saraksts</h1>
+<h1 class="center">Kategorijas</h1>
 <form>
     <input name="q" type="text" value="<?= $_GET["q"] ?? '' ?>">
     <button>Meklēt</button>
@@ -17,4 +17,4 @@
 <?php } ?>
 </ul>
 
-<?php require("views/components/footer.php"); ?>
+<?php require("views/components/footer.php");?>
