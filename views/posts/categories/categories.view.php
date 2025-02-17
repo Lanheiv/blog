@@ -7,13 +7,13 @@
     <button>Meklēt</button>
 </form>
     
-<?php if(count($posts) == 0) { ?>
+<?php if(count($categories) == 0) { ?>
     <p>Tukš</p>
 <?php } ?>
 
 <ul class="list">
-<?php foreach ($posts as $g) { ?>
-    <li><a href="categories.show?id=<?= $g["id"] ?>"> <?= htmlspecialchars($g["category_name"]); ?> </a></li>
+<?php foreach ($categories as $g) { ?>
+    <li><a href="categories/show?id=<?= $g["id"] ?>"> <?= htmlspecialchars($g["category_name"]); ?> </a></li>
 <?php } ?>
 </ul>
 

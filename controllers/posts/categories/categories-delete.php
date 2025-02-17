@@ -1,5 +1,4 @@
 <?php
-
 if (!Validator::number($_GET["id"])) {
     redirectIfNotFound();
 }
@@ -18,18 +17,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $db->query($sql , $params);
         header("Location: /"); exit();
     }
-    header("Location: /show?id=" . $_GET["id"]); exit();
+    header("Location: /categories?id=" . $_GET["id"]); exit();
 }
+
+require("views/posts/categories/categories-delete.view.php");
 ?>
-
-<?php require("views/components/header.php"); ?>
-<?php require("views/components/navbar.php"); ?>
-
-<h1 class="center">Dzēst ierakstu</h1>
-
-<form method="POST">
-    <button name="value">Apstiprināt</button>
-    <button>Atcelt</button>
-</form>
-
-<?php require("views/components/footer.php"); ?>
