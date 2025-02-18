@@ -1,36 +1,57 @@
-/* Galvenasi stils*/
-body {
-    margin: 0;
-    background-color: #29314C;
-    color: #E8E9E9;
-    font-family: 'Jetbrains Mono', 'monospace';
+.navbar { /* pamats navbar */
+  border-bottom: solid #D5D6D7 1px;
+  color: white;
+  
+  font-size: 20px;
 }
-.center {
-    text-align: center;
+#logo { 
+  padding: 10px;
 }
-a {
-    color: #E8E9E9;
-    text-decoration: none;
+nav {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+.nav-item a:hover, #logo:hover {
+  color: orange;
 }
 
-/* Saraksta stils */
-.list { 
-    list-style-type: none;
-}
+/* drowdown */
+.dropdown-menu {
+  background: black;
+  border: solid #D5D6D7 1px;
+  border-radius: 5px;
+  
+  display: none;
+  position: absolute;
 
-/* Navbar stils */
-ul.navbar {
-    background-color: #3E4162;
-    display: flex;
+  right: 0;
+  min-width: 150px;
 
-    list-style-type: none;
-    margin: 0;
-
-    justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
-ul.navbar li a {
-    padding: 20px;
+  
+.dropdown-item a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
 }
-ul.navbar li:hover {
-    background-color: #343758;
+.dropdown-box:hover .dropdown-menu {
+  display: block;
 }

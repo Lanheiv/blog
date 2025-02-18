@@ -1,4 +1,11 @@
 body {
     margin: 0;
-    background-color: rebeccapurple;
+    padding: 0;
+    
+    color: #D5D6D7;
+    background-color: #040505;
+    font-family: 'Jetbrains Mono', 'monospace';
+}
+a {
+    color: #D5D6D7;
 }
