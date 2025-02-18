@@ -1,10 +1,8 @@
 .navbar { /* pamats navbar */
-  border-bottom: solid #D5D6D7 1px;
-  color: white;
-  
+  border-bottom: solid 2px;
   font-size: 20px;
 }
-#logo { 
+#logo {
   padding: 10px;
 }
 nav {
@@ -32,8 +30,7 @@ nav {
 
 /* drowdown */
 .dropdown-menu {
-  background: black;
-  border: solid #D5D6D7 1px;
+  border: solid 2px;
   border-radius: 5px;
   
   display: none;
@@ -46,11 +43,11 @@ nav {
   padding: 0;
   margin: 0;
 }
-  
-.dropdown-item a {
-  padding: 10px 15px;
+
+.dropdown-item {
+  padding: 5px 5px;
   display: block;
-  color: white;
+  border-radius: 5px;
 }
 .dropdown-box:hover .dropdown-menu {
   display: block;

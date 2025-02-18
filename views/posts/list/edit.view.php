@@ -1,23 +1,28 @@
 <?php require("views/components/header.php"); ?>
 <?php require("views/components/navbar.php"); ?>
 
-<h1 class="center">Rediģēt bloga ierakstu</h1>
+<main class="block">
 
-<form method="POST">
-    <input name="content" type="text" value="<?= $_POST["content"] ?? $post["content"] ?>">
-    
-    <select name="categories">
-        <option value="0">--Tukšums--</option>
-        <?php foreach ($categories as $categ) { ?>
-            <option value="<?=$categ['id']?>" <?php if($post["category_id"] == $categ['id']){ echo "selected"; } ?> ><?=$categ["category_name"]?></option>
-        <?php } ?>
-    </select>   
+    <h1>Rediģēt bloga ierakstu</h1>
 
-    <button>Pievienot</button>
-</form>
+    <form method="POST">
+        <!-- teksts -->
+        <input name="content" type="text" value="<?= $_POST["content"] ?? $post["content"] ?>">
+        
+        <!-- kategorija -->
+        <select name="categories">
+            <option value="0">--Tukšums--</option>
+            <?php foreach ($categories as $categ) { ?>
+                <option value="<?=$categ['id']?>" <?php if($post["category_id"] == $categ['id']){ echo "selected"; } ?> ><?=$categ["category_name"]?></option>
+            <?php } ?>
+        </select>   
 
-<?php if(isset($errors["content"])) { ?>
+        <button>Pievienot</button>
+    </form>
+
+    <?php if(isset($errors["content"])) { ?>
     <p><?= $errors["content"] ?></p>
-<?php } ?>
+    <?php } ?>
+</main>
 
 <?php require("views/components/footer.php"); ?>

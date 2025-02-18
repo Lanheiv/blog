@@ -1,11 +1,16 @@
+* {
+    font-family: 'Jetbrains Mono', 'monospace';
+
+    color: #D5D6D7;
+    border: #D5D6D7;
+    background-color: #040505;
+}
 body {
     margin: 0;
     padding: 0;
-    
-    color: #D5D6D7;
-    background-color: #040505;
-    font-family: 'Jetbrains Mono', 'monospace';
 }
-a {
-    color: #D5D6D7;
+header {
+    padding-top: 9vw;
+    text-align: center;
 }
+

@@ -1,0 +1,47 @@
+.box {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+
+    border-bottom: solid 2px;
+    border-top: solid 2px;
+}
+.create-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-form input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+
+    border: solid 2px;
+}
+
+.create-form select {
+    width: 84%;
+    padding: 10px;
+    margin: 10px 0;
+    border: solid 2px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.create-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+
+    border: solid 2px;
+}
+.create-form button:hover, .create-form input:hover, .create-form select:hover {
+    color: orange;
+    border: solid 2px orange;
+}
