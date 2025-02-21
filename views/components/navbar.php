@@ -12,22 +12,22 @@
             </li>
 
             <li class="nav-item dropdown-box">
-                <a class="dropdown-block" href="">
+                <a class="dropdown-block" href="/list/creat">
                     Izveidot
                 </a>
                 
                 <ul class="dropdown-menu">
                     <li class="dropdown-item">
-                        <a href="/list/creat">Raksts</a>
+                        <a href="/list/creat">Izveidot</a>
                     </li>
                     <li class="dropdown-item">
-                        <a href="/categories/create">Kategorija</a>
+                        <a href="/categories/creat">Kategorija</a>
                     </li>
                 </ul>
             </li>
 
             <li class="nav-item dropdown-box">
-                <a class="dropdown-block" href="">
+                <a class="dropdown-block" href="/list">
                     Skatīt
                 </a>
                 

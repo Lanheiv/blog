@@ -1,27 +1,31 @@
 <?php require("views/components/header.php");?>
 <?php require("views/components/navbar.php");?>
 
-<h1 class="center">Saraksts</h1>
-<form>
-    <input name="q" type="text" value="<?= $_GET["q"] ?? '' ?>">
-    <button>Meklēt</button>
-</form>
-    
-<?php if(count($posts) == 0) { ?>
-    <p>Tukš</p>
-<?php } ?>
+<div class="table">
 
-<table class="list">
-    <tr>
-        <th>Nosaukums</th>
-        <th>Kategorija</th>
-    </tr>
-    <?php foreach ($posts as $g) { ?>
-        <tr>
-            <th><a href="/list/show?id=<?= $g["id"] ?>"> <?= htmlspecialchars($g["content"]);?></a></th>
-            <th><?= $g["category_name"] ?></th>
-        </tr>
-    <?php } ?>
-</table>
+    <h1>Saraksts</h1>
+
+    <form class="serch">
+        <input name="q" type="text" value="<?= $_GET["q"] ?? '' ?>">
+        <button>Meklēt</button>
+    </form>
+
+    <ul class="table-box">
+        <!-- izvada ja nekā nav -->
+        <?php if(count($posts) == 0) { ?>
+            <li>
+                <h3>Nav nekādu datu tabulā</h3>
+            </li>
+        <?php } else { ?>
+
+        <!-- izvada ja ir kautkas -->
+        <?php foreach($posts as $posts) {?>
+            <li class="table-item">
+                <a href="/list/show?id=<?= $posts["id"] ?>"> <?= htmlspecialchars($posts["content"]);?></a>
+                <?= $posts["category_name"] ?>
+            </li>
+        <?php } } ?>
+    </ul>
+</div>
 
 <?php require("views/components/footer.php"); ?>

@@ -24,7 +24,7 @@ nav {
   padding: 10px 15px;
   display: block;
 }
-.nav-item a:hover, #logo:hover {
+.nav-item a:hover, #logo:hover path {
   color: orange;
 }
 

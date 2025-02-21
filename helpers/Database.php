@@ -1,6 +1,6 @@
 <?php
     class Database {
-        public $pdo;
+        public static $pdo;
         
 
         // Konstruktors - izpilds vienu reizi, kad objekts ir uzstaisīts.
@@ -9,12 +9,12 @@
             $dsn = "mysql:" . http_build_query($config, "", ";");
             
             // PDO - PHP Data Object
-            $this->pdo = new PDO($dsn);
-            $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            self::$pdo = new PDO($dsn);
+            self::$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         }
-        public function query($sql, $params) {
+        public static function query($sql, $params) {
             // Sagatavo vaicājumu (statement) 
-            $statement = $this->pdo->prepare($sql); // prepare ir metode (līdzīk funkcijai)
+            $statement = self::$pdo->prepare($sql); // prepare ir metode (līdzīk funkcijai)
             // Izpildīt statements
             $statement->execute($params);
             // Atgriež datus

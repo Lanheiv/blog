@@ -6,6 +6,8 @@
     <title><?= $pagatitle ?? "..." ?></title>
     <link rel="stylesheet" href="/style/navbar.style.css">
     <link rel="stylesheet" href="/style/input.style.css">
+    <link rel="stylesheet" href="/style/table.style.css">
     <link rel="stylesheet" href="/style/basic.style.css">
+
 </head> 
 <body>

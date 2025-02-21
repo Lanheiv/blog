@@ -12,6 +12,6 @@
         "/categories/show" => "controllers/posts/categories/categories-show.php",
         "/categories/edit" => "controllers/posts/categories/categories-edit.php",
         "/categories/delete" => "controllers/posts/categories/categories-delete.php",
-        "/categories/create" => "controllers/posts/categories/categories-create.php"
+        "/categories/creat" => "controllers/posts/categories/categories-create.php"
     ];
 ?>
