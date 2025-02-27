@@ -8,7 +8,7 @@
     $categories = $db->query($sql , $params)->fetchAll();
 
 
-    $sql = "SELECT * FROM post WHERE id = :id";
+    $sql = "SELECT * FROM post WHERE id = :id"; // :id saistītais parametrs izmanto lai izvairītos no enjekcijām
     $params = ["id" => $_GET["id"]];
     $post = $db->query($sql, $params)->fetch();
 

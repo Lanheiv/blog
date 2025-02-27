@@ -1,7 +1,7 @@
 <?php require("views/components/header.php");?>
 <?php require("views/components/navbar.php");?>
 
-<div class="table">
+<div class="box">
 
     <h1>Saraksts</h1>
 
@@ -13,7 +13,7 @@
     <ul class="table-box">
         <!-- izvada ja nekā nav -->
         <?php if(count($posts) == 0) { ?>
-            <li>
+            <li class="table-none">
                 <h3>Nav nekādu datu tabulā</h3>
             </li>
         <?php } else { ?>

@@ -1,0 +1,37 @@
+.serch {
+    display: flex;
+}
+.serch input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+
+    border: solid 2px;
+}
+.serch button {
+    padding: 10px 20px;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+
+    border: solid 2px;
+}
+
+.table-box {
+    display: flex;
+    padding: 10px;
+}
+.table-item {
+    padding: 10px 20px;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+
+    border: solid 2px;
+    list-style-type: none; /* noņem punktiņu */
+}
